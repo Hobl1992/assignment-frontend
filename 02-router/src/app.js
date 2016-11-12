@@ -1,24 +1,30 @@
-import $ from 'jquery'
-import router from './router'
-import homeTpl from './templates/home.hbs'
-import contactTpl from './templates/contact.hbs'
-import notFoundTpl from './templates/not-found.hbs'
+import $ from 'jquery';
+import router from './router';
+import homeTpl from './templates/home.hbs';
+import contactTpl from './templates/contact.hbs';
+import notFoundTpl from './templates/not-found.hbs';
+import playerTpl from './templates/player.hbs';
 
-const $app = $('#app')
+const $app = $('#app');
 
 function index() {
-  $app.html(homeTpl())
+  $app.html(homeTpl());
 }
 
 function contact() {
-  $app.html(contactTpl())
+  $app.html(contactTpl());
 }
 
 function notFound() {
-  $app.html(notFoundTpl())
+  $app.html(notFoundTpl());
 }
 
-router('/', index)
-router('/contact', contact)
-router('*', notFound)
-router()
+function players(dynamicPart) {
+    $app.html(playerTpl({dynamicPart}));
+}
+
+router('/', index);
+router('/contact', contact);
+router('/players/:player', players);
+router('*', notFound);
+router();
