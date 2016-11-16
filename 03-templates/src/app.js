@@ -7,15 +7,15 @@ import playerTpl from './templates/player.hbs';
 
 const $app = $('#app');
 
-const chessPlayers = {
+const $chessPlayers = {
     'magnus' : {
         name: 'Magnus Carlsen',
-        image: 'https://cdn.worldchess.com/static/img/ny2016v2/carlsen.png'
+        image: 'https://cdn.worldchess.com/static/img/ny2016v2/carlsen.png',
         description: 'is good but not very good'
     },
     'sergey' : {
         name: 'Sergey Karjakin',
-        image: 'https://cdn.worldchess.com/static/img/ny2016v2/karjakin.png'
+        image: 'https://cdn.worldchess.com/static/img/ny2016v2/karjakin.png',
         description: 'is better but also not very good'
     }
 }
@@ -34,10 +34,10 @@ function notFound() {
 
 function players(dynamicPart) {
     if(dynamicPart === 'sergey') {
-        $app.html(playerTpl(chessPlayers.sergey));
+        $app.html(playerTpl($chessPlayers.sergey));
     }
     else if(dynamicPart === 'magnus') {
-        $app.html(playerTpl(chessPlayers.magnus));
+        $app.html(playerTpl($chessPlayers.magnus));
     }
     else{
         $app.html(notFoundTpl());

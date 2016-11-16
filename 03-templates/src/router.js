@@ -82,6 +82,3 @@ function getRegExOfRoute(route) {
 
   return new RegExp(route + '$');
 }
-
-
-
