@@ -1,6 +1,33 @@
 <h3>Interaction</h3>
 <div class="row">
-  <div class="col-sm-12">
-    <img src="https://cdn-images-1.medium.com/max/1600/1*U7-kEh5rvHXD2TVIgdugWw.jpeg">
-  </div>
+    <div class="col-sm-12">
+      <svg id="btn" viewBox="0 0 300 50">
+          <g>
+              <rect id="btn-background" height="50" width="300" rx="5" ry="5" fill="green"></rect>
+              <text id="commit" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" fill="white">Commit</text>
+          </g>
+          <g id="slider">
+              <rect id="btn-slide" height="50" width="50" x="0" y="0" rx="5" ry="5" fill="lightgreen"></rect>
+              <path id="btn-arrow" d="m 15,5 L 40,25 L 15,45 L 15,40 L 34,25 L 15,10 z" fill="white"/>
+          </g>
+          <text id="committed" visibility="hidden" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" fill="white">Committed</text>
+      </svg>
+        <!--<img src="https://cdn-images-1.medium.com/max/1600/1*U7-kEh5rvHXD2TVIgdugWw.jpeg">-->
+    </div>
 </div>
+
+<style type = "text/css">
+    #btn {
+        width: 300px;
+        height: 50px;
+    }
+    #commit, #committed {
+        font-size: 24px;
+        font-family: "Comic Sans MS";
+    }
+    #slider {
+        cursor: pointer;
+    }
+</style>
+
+
