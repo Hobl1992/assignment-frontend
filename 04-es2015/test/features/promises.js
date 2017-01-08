@@ -20,4 +20,5 @@ export default function() {
       val.should.eql(10)
     });
   });
+
 }
